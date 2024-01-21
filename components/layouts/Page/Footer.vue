@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { awesome } = useAppConfig()
+const { awesome } = useAppConfig();
 </script>
 
 <template>
@@ -10,7 +10,7 @@ const { awesome } = useAppConfig()
       <div>
         Copyright ©
         {{ awesome?.layout?.footer?.year || new Date().getFullYear() }}
-        {{ awesome?.author?.name || '' }}. All rights reserved.
+        {{ awesome?.author?.name || "" }}. All rights reserved.
       </div>
       <div>{{ awesome.name }}</div>
     </div>

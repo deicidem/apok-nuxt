@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   emptyTip: {
     type: String,
     required: false,
-    default: 'This page is empty',
+    default: "This page is empty",
   },
-})
+});
 </script>
 
 <template>

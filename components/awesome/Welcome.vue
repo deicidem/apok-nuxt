@@ -1,57 +1,57 @@
 <script lang="ts" setup>
-const { awesome } = useAppConfig()
-const { parseMenuRoute, parseMenuTitle } = useNavbarParser()
+const { awesome } = useAppConfig();
+const { parseMenuRoute, parseMenuTitle } = useNavbarParser();
 
 const props = defineProps({
   withAlert: {
     type: Boolean,
     default: true,
   },
-})
+});
 const showAlert = ref(
   awesome?.layout?.welcome?.disableInfoReplaceIndexInWelcomePage
     ? !awesome?.layout?.welcome?.disableInfoReplaceIndexInWelcomePage
     : props.withAlert,
-)
+);
 
 const titlesText = computed<string[]>(() =>
   (
     awesome?.layout?.welcome?.title ||
     awesome?.name ||
-    'Nuxt&nbsp;3 Awesome Starter'
+    "Nuxt&nbsp;3 Awesome Starter"
   )
-    .replaceAll('&nbsp;', '[space]')
-    .split(' ')
-    .map((item) => item.replaceAll('[space]', ' ')),
-)
+    .replaceAll("&nbsp;", "[space]")
+    .split(" ")
+    .map((item) => item.replaceAll("[space]", " ")),
+);
 const leadingsText = computed(() => [
   {
     text: titlesText.value[0],
-    startColor: '#007CF0',
-    endColor: '#00DFD8',
+    startColor: "#007CF0",
+    endColor: "#00DFD8",
     delay: 0,
   },
   {
     text: titlesText.value[1],
-    startColor: '#7928CA',
-    endColor: '#FF0080',
+    startColor: "#7928CA",
+    endColor: "#FF0080",
     delay: 2,
   },
   {
     text: titlesText.value[2],
-    startColor: '#FF4D4D',
-    endColor: '#F9CB28',
+    startColor: "#FF4D4D",
+    endColor: "#F9CB28",
     delay: 4,
   },
-])
+]);
 
 onMounted(() => {
   try {
-    console.log('aweawe', parseMenuTitle('aweawe'), this)
+    console.log("aweawe", parseMenuTitle("aweawe"), this);
   } catch (error) {
-    console.log('aweawe error', error)
+    console.log("aweawe error", error);
   }
-})
+});
 </script>
 
 <template>
@@ -75,7 +75,7 @@ onMounted(() => {
         <div class="px-4 mt-6 text-center max-w-[500px] md:max-w-[600px]">
           {{
             awesome?.description ||
-            'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.'
+            "a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more."
           }}
         </div>
         <div
@@ -191,7 +191,7 @@ onMounted(() => {
   content: var(--content);
   display: block;
   width: 100%;
-  color: theme('colors.slate.800');
+  color: theme("colors.slate.800");
   top: 0;
   bottom: 0;
   left: 0;
@@ -203,7 +203,7 @@ onMounted(() => {
     position: absolute;
     display: block;
     width: 100%;
-    color: theme('colors.slate.800');
+    color: theme("colors.slate.800");
     top: 0;
     bottom: 0;
     left: 0;
@@ -230,9 +230,9 @@ onMounted(() => {
 }
 html.dark {
   .animated-text-bg {
-    color: theme('colors.gray.100');
+    color: theme("colors.gray.100");
     &:before {
-      color: theme('colors.gray.100');
+      color: theme("colors.gray.100");
     }
   }
 }

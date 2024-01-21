@@ -1,24 +1,21 @@
-import type { RouteLocationRaw } from 'vue-router'
-import { NuxtApp } from '#app'
-import {
-  AwesomeLayoutPageNavbarMenu,
-  AwesomeLayoutPageNavbarMenuDropdownItem,
-} from './types'
+import type { RouteLocationRaw } from "vue-router";
+import { type NuxtApp } from "#app";
+import type { AwesomeLayoutPageNavbarMenu } from "./utils/types";
 
-export interface NuxtAwesomeAppConfig {
+export interface NuxtAppConfig {
   /** title name */
-  name?: string
+  name?: string;
   /** description */
-  description?: string
+  description?: string;
 
   /** project config */
   project?: {
     /** links */
     links?: {
       /** project github link */
-      github?: string
-    }
-  }
+      github?: string;
+    };
+  };
 
   /** layout config */
   layout?: {
@@ -27,64 +24,58 @@ export interface NuxtAwesomeAppConfig {
       /** navbar */
       navbar?: {
         /** menus in navbar */
-        menus?: AwesomeLayoutPageNavbarMenu[]
-      }
-    }
+        menus?: AwesomeLayoutPageNavbarMenu[];
+      };
+    };
     /** footer */
     footer?: {
       /** footer year */
-      year?: number
-    }
+      year?: number;
+    };
     /** welcome component page */
     welcome?: {
-      title?: string
-      disableInfoReplaceIndexInWelcomePage?: boolean
+      title?: string;
+      disableInfoReplaceIndexInWelcomePage?: boolean;
       primaryActionButton?: {
-        title?: string
-        to?: RouteLocationRaw | ((nuxt: NuxtApp) => RouteLocationRaw)
-      }
+        title?: string;
+        to?: RouteLocationRaw | ((nuxt: NuxtApp) => RouteLocationRaw);
+      };
       secondaryActionButton?: {
-        title?: string
-        to?: RouteLocationRaw | ((nuxt: NuxtApp) => RouteLocationRaw)
-      }
-    }
-  }
+        title?: string;
+        to?: RouteLocationRaw | ((nuxt: NuxtApp) => RouteLocationRaw);
+      };
+    };
+  };
 
   /** author config */
   author?: {
     /** author name */
-    name?: string
+    name?: string;
     /** author links */
     links?: {
       /** author github link */
-      github?: string
+      github?: string;
       /** author medium link */
-      medium?: string
+      medium?: string;
       /** author website link */
-      website?: string
-    }
-  }
+      website?: string;
+    };
+  };
 
   /** author config */
-  disableInfoReplaceIndexInWelcomePage?: boolean
+  disableInfoReplaceIndexInWelcomePage?: boolean;
 }
 
-declare module '@nuxt/schema' {
+declare module "@nuxt/schema" {
   interface AppConfigInput {
-    awesome?: NuxtAwesomeAppConfig
+    awesome?: NuxtAppConfig;
   }
 }
 
 export default defineAppConfig({
   awesome: {
-    name: 'Nuxt 3 Awesome Starter',
-    description:
-      'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.',
-    project: {
-      links: {
-        github: 'https://github.com/viandwi24/nuxt3-awesome-starter',
-      },
-    },
+    name: "АПОК",
+    description: "Автоматизация процессов оценки качества данных ДЗЗ",
     layout: {
       page: {
         navbar: {
@@ -94,32 +85,11 @@ export default defineAppConfig({
       footer: {
         year: new Date().getFullYear(),
       },
-      welcome: {
-        title: 'Nuxt&nbsp;3 Awesome Starter',
-        disableInfoReplaceIndexInWelcomePage: true,
-        primaryActionButton: {
-          title: 'Nuxt 3',
-          to: 'https://nuxt.com/',
-        },
-        secondaryActionButton: {
-          title: 'Github',
-          to: 'https://github.com/viandwi24/nuxt3-awesome-starter',
-        },
-      },
     },
-    author: {
-      name: 'viandwi24',
-      links: {
-        github: 'https://github.com/viandwi24',
-        medium: 'https://viandwi24.medium.com',
-        website: 'https://viandwi24.site',
-      },
-    },
-    disableInfoReplaceIndexInWelcomePage: false,
-  } as NuxtAwesomeAppConfig,
+  } as NuxtAppConfig,
   nuxtIcon: {
     aliases: {},
-    class: '',
-    size: '1em',
+    class: "",
+    size: "1em",
   },
-})
+});

@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-const nuxtApp = useNuxtApp()
-const { parseMenuRoute, parseMenuTitle } = useNavbarParser()
+const { parseMenuRoute, parseMenuTitle } = useNavbarParser();
 
-const props = defineProps({
+defineProps({
   menu: {
     type: Object as () =>
       | AwesomeLayoutPageNavbarMenu
@@ -13,7 +12,7 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-})
+});
 </script>
 
 <template>

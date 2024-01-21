@@ -1,23 +1,23 @@
 export interface ICounterState {
-  count: number
+  count: number;
 }
 
-export const useExample = defineStore('example', {
+export const useExample = defineStore("example", {
   state: (): ICounterState => ({
     count: 0,
   }),
   actions: {
     increment() {
-      this.count++
+      this.count++;
     },
     decrement() {
-      this.count--
+      this.count--;
     },
     reset() {
-      this.count = 0
+      this.count = 0;
     },
     increment2x() {
-      this.count *= 2
+      this.count *= 2;
     },
   },
-})
+});

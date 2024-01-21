@@ -1,40 +1,40 @@
 <script lang="ts" setup>
 const emit = defineEmits<{
-  (e: 'close', event: MouseEvent): void
-}>()
-const props = defineProps({
+  (e: "close", event: MouseEvent): void;
+}>();
+defineProps({
   closeButton: {
     type: Boolean,
     default: true,
   },
   closeButtonText: {
     type: String,
-    default: 'Cancel',
+    default: "Cancel",
   },
-})
+});
 
-const isShow = ref(false)
+const isShow = ref(false);
 
 const close = (e: MouseEvent) => {
-  isShow.value = false
-  setTimeout(() => emit('close', e), 300)
-}
+  isShow.value = false;
+  setTimeout(() => emit("close", e), 300);
+};
 
 const onCloseComponentClick = (e: MouseEvent) => {
-  const acceptedClasses = ['action-sheet', 'action-sheet-container']
-  const target = e.target as HTMLElement
-  const targetClassList = target.classList
+  const acceptedClasses = ["action-sheet", "action-sheet-container"];
+  const target = e.target as HTMLElement;
+  const targetClassList = target.classList;
   for (const acceptedClass of acceptedClasses) {
     if (targetClassList.contains(acceptedClass)) {
-      close(e)
-      break
+      close(e);
+      break;
     }
   }
-}
+};
 
 onMounted(() => {
-  isShow.value = true
-})
+  isShow.value = true;
+});
 </script>
 
 <template>

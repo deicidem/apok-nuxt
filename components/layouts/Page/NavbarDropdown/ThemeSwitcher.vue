@@ -2,25 +2,25 @@
 const props = defineProps({
   type: {
     type: String,
-    default: 'dropdown-right-top',
+    default: "dropdown-right-top",
   },
-})
-const currentStyle = toRef(props, 'type')
+});
+const currentStyle = toRef(props, "type");
 
 const availableThemes = [
   {
-    key: 'light',
-    text: 'Light',
+    key: "light",
+    text: "Light",
   },
   {
-    key: 'dark',
-    text: 'Dark',
+    key: "dark",
+    text: "Dark",
   },
   {
-    key: 'system',
-    text: 'System',
+    key: "system",
+    text: "System",
   },
-]
+];
 </script>
 
 <template>

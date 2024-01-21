@@ -3,7 +3,7 @@
 const props = defineProps({
   text: {
     type: String,
-    default: '',
+    default: "",
   },
   to: {
     type: [String, Object],
@@ -11,12 +11,12 @@ const props = defineProps({
   },
   href: {
     type: String,
-    default: '',
+    default: "",
   },
-})
+});
 // state
-const href = toRef(props, 'href')
-const to = toRef(props, 'to')
+const href = toRef(props, "href");
+const to = toRef(props, "to");
 </script>
 
 <template>

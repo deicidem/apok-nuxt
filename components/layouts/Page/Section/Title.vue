@@ -2,9 +2,9 @@
 defineProps({
   text: {
     type: String,
-    default: '',
+    default: "",
   },
-})
+});
 </script>
 
 <template>
