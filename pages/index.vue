@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import Button from "~/components/ui/button/Button.vue";
-
 const { awesome } = useAppConfig();
 
 definePageMeta({ layout: "page" });
@@ -12,6 +10,28 @@ useHead({
 
 <template>
   <div class="">
-    <Button :variant="'outline'">asdf</Button>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead> № </TableHead>
+          <TableHead> Название </TableHead>
+          <TableHead> Статус </TableHead>
+          <TableHead> Дата </TableHead>
+        </TableRow>
+      </TableHeader>
+
+      <TableBody>
+        <TableRow>
+          <TableCell> 1 </TableCell>
+          <TableCell> 1 </TableCell>
+          <TableCell> 1 </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell> 1 </TableCell>
+          <TableCell> 1 </TableCell>
+          <TableCell> 1 </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 </template>

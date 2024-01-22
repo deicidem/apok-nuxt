@@ -1,5 +1,3 @@
-import type { RouteLocationRaw } from "vue-router";
-import { type NuxtApp } from "#app";
 import type { AwesomeLayoutPageNavbarMenu } from "./utils/types";
 
 export interface NuxtAppConfig {
@@ -33,18 +31,6 @@ export interface NuxtAppConfig {
       year?: number;
     };
     /** welcome component page */
-    welcome?: {
-      title?: string;
-      disableInfoReplaceIndexInWelcomePage?: boolean;
-      primaryActionButton?: {
-        title?: string;
-        to?: RouteLocationRaw | ((nuxt: NuxtApp) => RouteLocationRaw);
-      };
-      secondaryActionButton?: {
-        title?: string;
-        to?: RouteLocationRaw | ((nuxt: NuxtApp) => RouteLocationRaw);
-      };
-    };
   };
 
   /** author config */

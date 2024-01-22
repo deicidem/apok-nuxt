@@ -6,6 +6,9 @@
     "skipLibCheck": true,
     "ignoreDeprecations": "5.0",
     "suppressImplicitAnyIndexErrors": true,
-    "types": ["@pinia/nuxt", "@nuxtjs/tailwindcss"]
+    "types": ["@pinia/nuxt", "@nuxtjs/tailwindcss"],
+    "paths": {
+      "@*": ["./*"]
+    }
   }
 }
